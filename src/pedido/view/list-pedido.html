@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 col-md-10">
                         <h4 class="text-primary">
-                            Gerenciamento de clientes
+                            Gerenciamento de pedidos
                         </h4>
                     </div>
                     <div class="col-12 col-sm-2 col-md-2">
@@ -17,16 +17,16 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="table-cliente">
+                    <table class="table table-hover" id="table-pedido">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col" class="text-center">ID</th>
-                                <th scope="col" class="text-center">NOME</th>
-                                <th scope="col" class="text-center">TELEFONE</th>
+                                <th scope="col" class="text-center">DATA</th>
+                                <th scope="col" class="text-center">CLIENTE</th>
+                                <th scope="col" class="text-center">PRODUTO</th>
+                                <th scope="col" class="text-center">QUANTIDADE</th>
                                 <th scope="col" class="text-center">AÇÕES</th>
                             </tr>
                         </thead>
-                        
                     </table>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 
 <!-- Modal para carregar o formulário -->
 
-<div id="modal-cliente" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+<div id="modal-pedido" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -56,9 +56,9 @@
     </div>
 </div>
 
-<script src="src/cliente/controller/new-cliente.js"></script>
-<script src="src/cliente/controller/list-cliente.js"></script>
-<script src="src/cliente/controller/save-cliente.js"></script>
-<script src="src/cliente/controller/view-cliente.js"></script>
-<script src="src/cliente/controller/edit-cliente.js"></script>
-<script src="src/cliente/controller/delete-cliente.js"></script>
+<script src="src/pedido/controller/new-pedido.js"></script>
+<script src="src/pedido/controller/list-pedido.js"></script>
+<script src="src/pedido/controller/save-pedido.js"></script>
+<script src="src/pedido/controller/view-pedido.js"></script>
+<script src="src/pedido/controller/edit-pedido.js"></script>
+<script src="src/pedido/controller/delete-pedido.js"></script>
