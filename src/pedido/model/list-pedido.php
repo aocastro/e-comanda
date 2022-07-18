@@ -13,7 +13,7 @@
     $colunas = $requestData['columns'];
 
     //Preparar o comando sql para obter os dados da categoria
-    $sql = "SELECT DATE_FORMAT(p2.DATA, '%d/%m/%Y %H:%i:%s') as DATA, p2.DATA as ID, c.NOMECLIENTE as CLIENTE, p.NOME as PRODUTO, p2.QTDE FROM CLIENTE c, PRODUTO p, PEDIDO p2 WHERE p2.CLIENTE_ID = c.ID AND p2.PRODUTO_ID = p.ID ";
+    $sql = "SELECT DATE_FORMAT(p2.DATA, '%d/%m/%Y %H:%i:%s') as DATA, c.ID as CLIENTE_ID, c.NOME as CLIENTE, p.ID as PRODUTO_ID, p.NOME as PRODUTO, p2.QTDE FROM CLIENTE c, PRODUTO p, PEDIDO p2 WHERE p2.CLIENTE_ID = c.ID AND p2.PRODUTO_ID = p.ID ";
 
     //Obter o total de registros cadastrados
     $resultado = $pdo->query($sql);

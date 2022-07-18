@@ -17,7 +17,7 @@
 
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare("INSERT INTO CLIENTE (NOMECLIENTE, TELEFONE, EMPRESA_ID) VALUES (:a, :b, :c)");
+                $stmt = $pdo->prepare("INSERT INTO CLIENTE (NOME, TELEFONE, EMPRESA_ID) VALUES (:a, :b, :c)");
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NOME']),
                     ':b' => $requestData['TELEFONE'],
@@ -35,7 +35,7 @@
             }
         }else{
             try{
-                $stmt = $pdo->prepare("UPDATE CLIENTE SET NOMECLIENTE = :a, TELEFONE = :b WHERE ID = :id");
+                $stmt = $pdo->prepare("UPDATE CLIENTE SET NOME = :a, TELEFONE = :b WHERE ID = :id");
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NOME']),

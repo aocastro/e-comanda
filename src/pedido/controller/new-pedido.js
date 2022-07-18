@@ -17,7 +17,7 @@ $(document).ready(function() {
                 url: 'src/cliente/model/all-cliente.php',
                 success: function(dados){
                     for(const result of dados){
-                        $('#CLIENTE_ID').append(`<option value="${result.ID}">${result.NOMECLIENTE}</option>`)
+                        $('#CLIENTE_ID').append(`<option value="${result.ID}">${result.NOME}</option>`)
                     }
                 }
             })

@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#table-pedido').on('click', 'button.btn-delete', function(e){
         e.preventDefault()
 
-        let ID = `ID=${$(this).attr('id')}`
+        let ID = `CLIENTE_ID=${$(this).attr('data-cliente')}`
 
         Swal.fire({
             title: 'e-Comanda',

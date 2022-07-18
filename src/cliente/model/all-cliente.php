@@ -6,7 +6,7 @@
 
     $EMPRESA_ID = $_SESSION['ID'];
 
-    $sql = "SELECT * FROM CLIENTE WHERE EMPRESA_ID = ".$EMPRESA_ID." ORDER BY NOMECLIENTE DESC";
+    $sql = "SELECT * FROM CLIENTE WHERE EMPRESA_ID = ".$EMPRESA_ID." ORDER BY NOME DESC";
 
     $resultado = $pdo->query($sql);
 
