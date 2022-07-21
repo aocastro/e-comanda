@@ -20,7 +20,7 @@ $(document).ready(function() {
                         <tr>
                             <th scope="col" class="text-center">${result.DATA}</th>
                             <th scope="col" class="text-center">${result.PRODUTO}</th>
-                            <th scope="col" class="text-center">${result.VALOR}</th>
+                            <th scope="col" class="text-center">${result.VALOR.toLocaleString("pt-BR", { style: "currency" , currency:"BRL"})}</th>
                             <th scope="col" class="text-center">${result.QTDE}</th>
                         </tr>
                     `)

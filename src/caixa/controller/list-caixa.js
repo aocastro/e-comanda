@@ -1,20 +1,24 @@
 $(document).ready(function() {
-    $('#table-produto').DataTable({
+    $('#table-caixa').DataTable({
         "processing": true,
         "serverSide": true,
         "ajax": {
-            "url": "src/produto/model/list-produto.php",
+            "url": "src/caixa/model/list-caixa.php",
             "type": "POST"
         },
         "language": {
             "url": "libs/DataTables/pt_br.json"
         },
         "columns": [{
-                "data": 'ID',
+                "data": 'DATA',
                 "className": 'text-center'
             },
             {
-                "data": 'NOME',
+                "data": 'DESCRICAO',
+                "className": 'text-center'
+            },
+            {
+                "data": 'LANCAMENTO',
                 "className": 'text-center'
             },
             {

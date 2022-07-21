@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-    $('#table-pedido').on('click', 'button.btn-delete', function(e){
+    $('#table-caixa').on('click', 'button.btn-delete', function(e){
         e.preventDefault()
 
-        let ID = `DATA=${$(this).attr('data-time')}`
+        let ID = `ID=${$(this).attr('id')}`
 
         Swal.fire({
             title: 'e-Comanda',
@@ -19,7 +19,7 @@ $(document).ready(function() {
                     dataType: 'json',
                     assync: true,
                     data: ID,
-                    url: 'src/pedido/model/delete-pedido.php',
+                    url: 'src/caixa/model/delete-caixa.php',
                     success: function(dados){
                         Swal.fire({
                             title: 'e-Comanda',
@@ -27,7 +27,7 @@ $(document).ready(function() {
                             icon: dados.tipo,
                             confirmButtonText: 'OK'
                         })
-                        $('#table-pedido').DataTable().ajax.reload()
+                        $('#table-caixa').DataTable().ajax.reload()
                     }
                 })
             }

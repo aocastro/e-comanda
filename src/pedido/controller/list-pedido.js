@@ -26,19 +26,15 @@ $(document).ready(function() {
                 "className": 'text-center'
             },
             {
-                "data": 'CLIENTE_ID',
+                "data": 'DATA_ORIGINAL',
                 "orderable": false,
                 "searchable": false,
                 "className": 'text-center',
                 "render": function(data, type, row, meta) {
                     return `
-                    <button data-cliente="${data}" class="btn btn-danger btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    <button data-time="${data}" class="btn btn-danger btn-delete"><i class="fa-solid fa-trash"></i></button>
                     `
                 }
-            },
-            {
-                "data": 'PRODUTO_ID',
-                "className": 'd-none',
             }
         ]
     })

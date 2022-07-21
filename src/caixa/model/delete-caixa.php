@@ -2,9 +2,9 @@
 
     include('../../conexao/conn.php');
 
-    $DATA = $_REQUEST['DATA'];
+    $ID = $_REQUEST['ID'];
 
-    $sql = "DELETE FROM PEDIDO WHERE DATA = '$DATA'";
+    $sql = "DELETE FROM CAIXA WHERE ID = $ID";
 
     $resultado = $pdo->query($sql);
 
